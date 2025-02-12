@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/e0b303a9da.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <title>Code Editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <div>
+        <i class="fa-solid fa-code"><span>
+          
+        </span><span class="multiple-text"> 
+</span></i>
+        <br>
+        <div class="youtube">
+          <i class="fa-brands fa-youtube"> </i>
+          <a href="https://youtube.com/@codewithabhiji?si=CGPGgvW6rJIfAlDO">Youtube</a>
+        </div>
+      </div>
+      <button class="toggle-button" onclick="toggleMode()">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+  </header>
+  <div class="button-container">
+    <button onclick="saveAllFiles()"><i class="fa-solid fa-floppy-disk"></i> Save</button>
+  </div>
+  <div class="container">
+    <div class="left">
+      <label><i class="fa-brands fa-html5"></i> HTML</label>
+      <textarea id="html" onkeyup="run()"></textarea>
+
+      <label><i class="fa-brands fa-css3-alt"></i> CSS</label>
+      <textarea id="css" onkeyup="run()"></textarea>
+
+      <label><i class="fa-brands fa-js"></i> JavaScript</label>
+      <textarea id="javascript" onkeyup="run()"></textarea>
+    </div>
+    <div class="right">
+      <label for="output"><i class="fa-solid fa-display"></i> Output</label>
+      <iframe id="output"></iframe>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
